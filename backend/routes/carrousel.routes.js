@@ -8,7 +8,7 @@ const s3 = new AWS.S3({
 });
 
 carrouselRouter.get('', async (req, res) => {
-  const bucketName = 'my-very-special-bucket';
+  const bucketName = 'my-very-special-bucket-brentcaes';
 
   try {
     // Vraag de lijst van objecten in de bucket op
