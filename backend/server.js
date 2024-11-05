@@ -16,8 +16,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/health', healthRoutes);
-app.use('/todo', cors() ,todoRoutes);
-app.use('/carrousel', cors() ,carrouselRoutes)
+app.use('/todo', cors(), todoRoutes);
+app.use('/carrousel', cors(), carrouselRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
