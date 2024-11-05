@@ -28,7 +28,7 @@ carrouselRouter.get('', async (req, res) => {
   } catch (error) {
     console.error('Error retrieving files from S3:', error);
     console.error('Detailed error:', error.stack);  // Log stack trace for better insights
-    res.status(500).send(Error retrieving images: ${error.message});
+    res.status(500).send(`Error retrieving images: ${error.message}`);
   }
 });
 
