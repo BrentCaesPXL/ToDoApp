@@ -4,12 +4,12 @@ const carrouselRouter = express.Router();
 
 // Configureer de AWS SDK
 const s3 = new AWS.S3({
-  region: 'us-east-1', // Pas aan naar de regio van je bucket
+  region: 'us-west-2', // Pas aan naar de regio van je bucket
 });
 
 carrouselRouter.get('', async (req, res) => {
   const bucketName = 'my-very-special-bucket-brentcaes';
-  const region = 'us-east-1';
+  const region = 'us-west-2';
 
   try {
     // Vraag de lijst van objecten in de bucket op
