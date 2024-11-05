@@ -19,8 +19,11 @@ carrouselRouter.get('', async (req, res) => {
 
     const data = await s3.listObjectsV2(params).promise();
     
-    // Maak een lijst met de URLs van alle afbeeldingsbestanden
-    const imageUrls = data.Contents.map(file => `https://${bucketName}.s3.${region}.amazonaws.com/${file.Key}`);
+    // Maak een lijst met de URLs van alle afbeeldingsbestande
+    const imageUrls = data.Contents.map(file => ({
+    url: `https://${bucketName}.s3.${region}.amazonaws.com/${file.Key}`
+}));
+
     
     // Stuur de lijst met afbeeldings-URLs als JSON terug
     res.json(imageUrls);
